@@ -16,20 +16,18 @@ default = "eu-west-2"
 #    default = 3
 #    type = number
 #}
-
 # Name of Tier 1 with direct internet access (e.g. public, frontend)
-variable "tier1" {
+variable "publicsubnet" {
   default = "frontend"
 }
 # Name of Tier 2 with internet access via Nat gatway (e.g. private)
-variable "tier2" {
+variable "websubnet" {
   default = "backend"
 }
 # Name of Tier 3 with internet access via Nat gatway (e.g. private)
-variable "tier3" {
+variable "datasubnet" {
   default = "storage"
 }
-
 # Default Instance Tenancy of EC2 instances
 #variable "instanceTenancy" {
 # default = ["default"]
@@ -49,17 +47,17 @@ variable "vpc_cidr" {
  type = string
 }
 # Public subnet
-variable "tier1_subnet_cidr" {
+variable "public-subnet-cidr" {
         default = "10.0.1.0/24"
         type = string
 }
 # Private subnet
-variable "tier2_subnet_cidr" {
+variable "web-subnet-cidr" {
         default = "10.0.2.0/24"
         type = string
 }
 # Private subnet
-variable "tier3_subnet_cidr" {
+variable "data-subnet-cidr" {
         default = "10.0.3.0/24"
         type = string
 }
@@ -84,3 +82,4 @@ variable "ephemeral_cidr" {
 #  }
 #}
 # end of variables.tf
+
