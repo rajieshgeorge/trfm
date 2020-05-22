@@ -17,7 +17,4 @@ data "aws_availability_zones" "availability_zones" {
   state = "available"
 }
 
-module "network" {
-  source = "./network"
-# servers = 5
-}
+

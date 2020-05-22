@@ -11,11 +11,7 @@ variable "region" {
 default = "eu-west-2"
  type = string
 }
-# No. of Availability Zones to be used for HA.
-#variable "az_count" {
-#    default = 3
-#    type = number
-#}
+
 # Name of Tier 1 with direct internet access (e.g. public, frontend)
 variable "publicsubnet" {
   default = "frontend"
@@ -28,11 +24,7 @@ variable "websubnet" {
 variable "datasubnet" {
   default = "storage"
 }
-# Default Instance Tenancy of EC2 instances
-#variable "instanceTenancy" {
-# default = ["default"]
-# type = list(string)
-#}
+
 # DNS support set to true
 variable "dnsSupport" {
  default = true
@@ -83,3 +75,14 @@ variable "ephemeral_cidr" {
 #}
 # end of variables.tf
 
+
+# No. of Availability Zones to be used for HA.
+#variable "az_count" {
+#    default = 3
+#    type = number
+#}
+# Default Instance Tenancy of EC2 instances
+#variable "instanceTenancy" {
+# default = ["default"]
+# type = list(string)
+#}
